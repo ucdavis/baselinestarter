@@ -1,0 +1,143 @@
+// fonts
+@font-face {
+    font-family: 'proxima-nova-r';
+    src: url('../media/fonts/proximanova-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'proxima-nova-i';
+    src: url('../media/fonts/proximanova-regularit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'proxima-nova-b';
+    src: url('../media/fonts/proximanova-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'ryman';
+    src: url('../media/fonts/ryman-eco-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+$sans-italic:   "proxima-nova-i",sans-serif;
+$sans-bold:     "proxima-nova-b",sans-serif;
+$sans-reg:      "proxima-nova-r",sans-serif;
+$ryman:         "ryman",serif;
+
+$recpool:         #74D1EA;
+$tahoe:           #00B5E2;
+$gunrock:         #0078FF;
+$bodega:          #002A3A;
+
+$rain:            #00FBDA;
+$arboretum:       #00C7B1;
+$putahcreek:      #008EAA;
+$delta:           #00534C;
+
+$farmersmakert:   #ADDC91;
+$sage:            #71CC98;
+$quad:            #43B02A;
+$redwood:         #385542;
+
+$goldenstate:     #FFFF5C;
+$sunflower:       #FFC72C;
+$poppy:           #ED8B00;
+$california:      #896C28;
+
+$rose:            #FF808B;
+$strawberry:      #F4364C;
+$doubledecker:    #BA0C2F;
+$merlot:          #76232F;
+
+$thiebauldicing:  #EF95CF;
+$redbud:          #D00070;
+$pinot:           #72246C;
+$cabernet:        #3C1053;
+
+$a-link:            $primary-color;
+
+$primary-font: rgba(31,31,31,.99); //
+$secondary-font: rgba(31,31,31,.80); //
+$tertiary-font: rgba(31,31,31,.40); //
+$primary-white: rgba(2545,2545,2545,.95); //
+$secondary-white: rgba(2545,2545,2545,.80); //
+
+$bg-color: transparentize(#002855, .9); // background
+$borders: #C8C7CC; // border color
+
+$box-shadow: 0 0 0 1px rgba(49,49,93,.03), 0 2px 5px 0 rgba(49,49,93,.1), 0 1px 2px 0 rgba(0,0,0,.08);
+// mixins
+
+@mixin breakpoint($point) {
+    @if $point==sm {
+        @media (min-width: 576px) {
+            @content ;
+        }
+    }
+    @if $point==md {
+        @media (min-width: 768px) {
+            @content ;
+        }
+    }
+    @if $point==lg {
+        @media (min-width: 992px) {
+            @content ;
+        }
+    }
+    @if $point==xl {
+        @media (min-width: 1200px) {
+            @content ;
+        }
+    }
+    @if $point==smmax {
+        @media (max-width: 576px) {
+            @content ;
+        }
+    }
+    @if $point==mdmax {
+        @media (max-width: 768px) {
+            @content ;
+        }
+    }
+    @if $point==lgmax {
+        @media (max-width: 992px) {
+            @content ;
+        }
+    }
+    @if $point==xlmax {
+        @media (max-width: 1200px) {
+            @content ;
+        }
+    }
+}
+.container {
+  width: 95%;
+  max-width:1200px;
+  @include breakpoint (sm) {
+    width: 93%;
+  }
+  @include breakpoint (md) {
+    width: 91%;
+  }
+  @include breakpoint(xl) {
+    width: 85%;
+  }
+}
+
+@mixin fader {
+  -o-transition:.25s;
+  -ms-transition:.25s;
+  -moz-transition:.25s;
+  -webkit-transition:.25s;
+  /* ...and now for the proper property */
+  transition:.25s;
+}
