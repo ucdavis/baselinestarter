@@ -63,8 +63,6 @@ $redbud:          #D00070;
 $pinot:           #72246C;
 $cabernet:        #3C1053;
 
-$a-link:            $primary-color;
-
 $primary-font: rgba(31,31,31,.99); //
 $secondary-font: rgba(31,31,31,.80); //
 $tertiary-font: rgba(31,31,31,.40); //
@@ -75,7 +73,52 @@ $bg-color: transparentize(#002855, .9); // background
 $borders: #C8C7CC; // border color
 
 $box-shadow: 0 0 0 1px rgba(49,49,93,.03), 0 2px 5px 0 rgba(49,49,93,.1), 0 1px 2px 0 rgba(0,0,0,.08);
-// mixins
+
+// baseline typography
+html {
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    line-height: 1.5;
+}
+body {
+    font-family: $sans-reg;
+    font-size: 1.2rem;
+}
+ul, ol {
+  &.no-list-style {
+    list-style-type: none;
+    padding-left:0px;
+    li {
+      margin:4px 0px;
+      font-family: $sans-reg;
+      color:$primary-font;
+    }
+  }
+  li {
+    font-size:1.6rem;
+  }
+}
+.discreet {
+  font-size:1.4rem;
+  color:$tertiary-font;
+}
+p {
+  font-size:1.6rem;
+  font-family: $sans-reg;
+  color:$primary-font;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $primary-font;
+    font-family:$sans-reg;
+}
+// breakpoints
 
 @mixin breakpoint($point) {
     @if $point==sm {
@@ -118,26 +161,4 @@ $box-shadow: 0 0 0 1px rgba(49,49,93,.03), 0 2px 5px 0 rgba(49,49,93,.1), 0 1px 
             @content ;
         }
     }
-}
-.container {
-  width: 95%;
-  max-width:1200px;
-  @include breakpoint (sm) {
-    width: 93%;
-  }
-  @include breakpoint (md) {
-    width: 91%;
-  }
-  @include breakpoint(xl) {
-    width: 85%;
-  }
-}
-
-@mixin fader {
-  -o-transition:.25s;
-  -ms-transition:.25s;
-  -moz-transition:.25s;
-  -webkit-transition:.25s;
-  /* ...and now for the proper property */
-  transition:.25s;
 }
