@@ -69,54 +69,33 @@ $tertiary-font: rgba(31,31,31,.40); //
 $primary-white: rgba(2545,2545,2545,.95); //
 $secondary-white: rgba(2545,2545,2545,.80); //
 
-$bg-color: transparentize(#002855, .9); // background
 $borders: #C8C7CC; // border color
 
 $box-shadow: 0 0 0 1px rgba(49,49,93,.03), 0 2px 5px 0 rgba(49,49,93,.1), 0 1px 2px 0 rgba(0,0,0,.08);
 
 // baseline typography
 html {
-    font-size: 10px;
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     line-height: 1.5;
 }
 body {
     font-family: $sans-reg;
-    font-size: 1.2rem;
+    color:$primary-font;
 }
 ul, ol {
   &.no-list-style {
     list-style-type: none;
     padding-left:0px;
     li {
-      margin:4px 0px;
-      font-family: $sans-reg;
-      color:$primary-font;
     }
-  }
-  li {
-    font-size:1.6rem;
   }
 }
 .discreet {
-  font-size:1.4rem;
   color:$tertiary-font;
 }
 p {
-  font-size:1.6rem;
-  font-family: $sans-reg;
-  color:$primary-font;
   line-height: 1.6;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: $primary-font;
-    font-family:$sans-reg;
 }
 // breakpoints
 
