@@ -5,13 +5,25 @@
   color:$recpool;
 }
 .btn-success {
-  background-color: $quad;
-  border-color:$quad;
+  background-color: $primary-color;
+  border-color:$primary-color;
 }
 .btn-success {
   &:hover {
     background: darken($quad, 5);
     border-color:darken($quad, 5);
+  }
+}
+.btn-danger {
+  &:hover {
+    background: darken($doubledecker, 5);
+    border-color:darken($doubledecker, 5);
+  }
+}
+.btn-info {
+  &:hover {
+    background: darken($pinot, 5);
+    border-color:darken($pinot, 5);
   }
 }
 .btn-success:focus, .btn-success.focus {
