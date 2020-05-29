@@ -63,13 +63,35 @@ $redbud:          #D00070;
 $pinot:           #72246C;
 $cabernet:        #3C1053;
 
+$primary-color: $sage !default;
+$secondary-color: $california !default;
+
+$theme-colors: (
+  primary: $primary-color,
+  secondary: $california-color,
+  blue: $gunrock,
+  indigo: $cabernet,
+  purple: $pinot,
+  pink: $strawberry,
+  red: $doubledecker,
+  orange: $poppy,
+  yellow: $sunflower,
+  green: $quad,
+  teal: $arboretum,
+  cyan: $putahcreek,
+  success: $quad,
+  info: $recpool,
+  warning: $sunflower,
+  danger: $doubledecker,
+  light: #f8f9fa,
+  dark: #343a40
+);
+
 $primary-font: rgba(31,31,31,.99); //
 $secondary-font: rgba(31,31,31,.80); //
 $tertiary-font: rgba(31,31,31,.40); //
 $primary-white: rgba(2545,2545,2545,.95); //
 $secondary-white: rgba(2545,2545,2545,.80); //
-
-$primary-color: #002855 !default;
 
 $borders: #C8C7CC; // border color
 
