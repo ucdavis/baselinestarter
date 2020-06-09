@@ -1,7 +1,7 @@
 {
   "name": "@ucdavis/gunrockin",
-  "version": "1.1.1",
-  "description": "New typography",
+  "version": "1.1.2",
+  "description": "box shadow",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
